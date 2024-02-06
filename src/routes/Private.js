@@ -18,7 +18,7 @@ export default function Private({children}) { //Children --> propriedade utiliza
                     }
 
                     // // Armazena as informações do usuário localmente no navegador
-                    // localStorage.setItem("@detailUser", JSON.stringify(userData))
+                    localStorage.setItem("@detailUser", JSON.stringify(userData))
 
                     setLoading(false); // Parar de carregar 
                     setSigned(true); // Logar usuário
