@@ -24,14 +24,14 @@ export default function Admin() {
             return;
         }
 
-        await addDoc(collection(db, "tarefas"), {
+        await addDoc(collection(db, "tarefas"), { // Registrar tarefa na lista
             tarefa: tarefaInput,
             created: new Date(),
             userUid: user?.uid
         })
         .then(() => {
             console.log("Tarefa Registrada")
-            setTarefaInput('')
+            setTarefaInput('') // Limpar o campo de adicionar tarefa
         })
         .catch((error) => {
 
